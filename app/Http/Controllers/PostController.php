@@ -35,15 +35,16 @@ class PostController extends Controller
             return redirect('/login');
         }
 
+
         // ログイン中のユーザーの情報を取得する
         $loginUser = Session::get('user');
+
 
         // データ登録
         $post = new Post;
         $post->user = $loginUser->id;
         $post->content = $request->postContent;
         $post->save();
-
         return redirect('/');
     }
 
