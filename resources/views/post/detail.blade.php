@@ -24,6 +24,7 @@
                 <div class="time-stamp">{{ $post->created_at }}</div>
             </a>
             <div class="menu">
+
                 <div class="menu-item font-blue">
                     <a href="/post/edit/{{ $post->id }}">編集</a>
                 </div>
