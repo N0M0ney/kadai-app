@@ -24,7 +24,7 @@
                 <div class="time-stamp">{{ $post->created_at }}</div>
             </a>
             <div class="menu">
-
+                @if ($isOwnPost)
                 <div class="menu-item font-blue">
                     <a href="/post/edit/{{ $post->id }}">編集</a>
                 </div>
@@ -38,6 +38,7 @@
         </div>
     </div>
 </body>
+@endif
 <x-footer></x-footer>
 <script src="{{ asset('/js/app.js') }}"></script>
 <script>
