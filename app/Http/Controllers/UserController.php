@@ -121,9 +121,18 @@ class UserController extends Controller
      * 新規登録処理
      */
     public function store(Request $request)
+
     {
         //TODO 登録処理
 
+        $user = new User();
+
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->password = $request->password;
+        $user->save();
+
+        Session::put('user', $user);
         return redirect('/');
     }
 }
